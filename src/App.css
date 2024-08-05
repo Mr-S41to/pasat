@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+p {
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #16162d;
+}
+
+.icon {
+  height: 40px;
+  margin: 10px;
+}
+
+.title {
+  color: #fafafa;
+  font-size: 20px;
+}
+
+.container {
+  position: relative;
+  min-height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./background.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.timer {
+  margin: 10px;
+  color: #42474d;
+  font-size: 20px;
+}
+
+.scoreBox {
+  padding: 10px;
+  border: solid 3px;
+  border-color: #5723e7;
+  border-radius: 10px;
+  background-color: #42474d81;
+  display: flex;
+  flex-direction: row;
+}
+
+.scoreTitle {
+  margin-inline: 10px;
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score {
+  margin-inline: 10px;
+  color: #5723e7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-grid {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: 20px;
+  background-color: #5723e7;
+  border: solid 3px;
+  border-color: #16162d;
+  border-radius: 20px;
+  color: #fafafa;
+  font-size: 26px;
+  font-weight: bold;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.iniciar {
+  background-color: #5723e7;
+  color: #fafafa;
+  border: solid 3px;
+  border-radius: 10px;
+  border-color: #16162d;
+  padding: 20px 80px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.numbers {
+  color: #16162d;
+  font-size: 20px;
+}
+
+.info {
+  background-color: #16162d;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #5723e7;
+}
+
+.github {
+  width: 120px;
+}
+
+.gitButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: solid 3px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerBox {
+  width: 33%;
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.info {
+  padding: 40px;
+}
+
+.sobre {
+  color: #fafafa;
+  background-color: #16162d;
+  font-size: 32px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+.emoji {
+  font-size: 32px;
+  color: #5723e7;
+  height: 40px;
+  margin-top: 60px;
+  margin: 20px;
+}
+
+@media (max-width: 1440px) {
+  .button-grid {
+    margin: 10px;
+  }
+  .button {
+    margin: 10px;
+    font-size: 20px;
+    height: 80px;
+    width: 80px;
+  }
+}
