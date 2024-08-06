@@ -84,7 +84,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="header">
-        <img src={icon} className="icon" />
+        {/* <img src={icon} className="icon" /> */}
         <h1 className="title">
           Teste Pasat - Paced Auditory Serial Addition Task
         </h1>
@@ -93,7 +93,7 @@ export default function App() {
         <div className="container">
           <p className="timer">Tempo restante: {tempoRestante} segundos</p>
           <div className="scoreBox">
-            <p className="scoreTitle">Pontuação: </p>{" "}
+            <p className="scoreTitle">Pontuação: </p>
             <p className="score">{pontos}</p>
           </div>
           <p className="emoji">{emoji}</p>

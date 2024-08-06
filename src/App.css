@@ -28,6 +28,8 @@ h3 {
 
 .header {
   width: 100%;
+  padding: 20px;
+  padding-inline: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -186,7 +188,7 @@ h3 {
 
 .sobre {
   color: #fafafa;
-  background-color: #16162d;
+  background-color: #fafafa00;
   font-size: 32px;
   cursor: pointer;
   border: none;
@@ -207,5 +209,52 @@ h3 {
     font-size: 20px;
     height: 80px;
     width: 80px;
+  }
+
+  .scoreBox {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 720px) {
+  .button-grid {
+    margin: 10px;
+  }
+
+  .button {
+    margin: 5px;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    border: solid 1px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+
+  .score {
+    font-size: 16px;
+  }
+
+  .scoreTitle {
+    font-size: 16px;
+  }
+
+  .numbers {
+    font-size: 16px;
+  }
+
+  .sobre {
+    font-size: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footerBox {
+    width: 100%;
   }
 }
