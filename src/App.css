@@ -78,13 +78,12 @@ h3 {
 }
 
 .scoreBox {
-  padding: 10px;
-  border: solid 3px;
-  border-color: #5723e7;
   border-radius: 10px;
-  background-color: #42474d81;
+  background-color: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .scoreTitle {
@@ -195,9 +194,10 @@ h3 {
   font-weight: bold;
 }
 .emoji {
-  font-size: 26px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
   color: #5723e7;
-  margin: 20px;
 }
 
 @media (max-width: 1440px) {
@@ -207,12 +207,21 @@ h3 {
   .button {
     margin: 10px;
     font-size: 20px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
+  }
+  
+  .scoreTitle {
+    font-size: 16px;
+  }
+  
+  .score {
+    font-size: 16px;
   }
 
-  .scoreBox {
-    padding: 5px;
+  .emoji {
+    height: 30px;
+    color: #5723e7;
   }
 }
 

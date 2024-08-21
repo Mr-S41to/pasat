@@ -54,7 +54,7 @@ export default function App() {
       setVelociadade((prev) => Math.max(3000, prev - 100)); //Incrementar velocidade.
       setEmoji("Correto 😄");
     } else {
-      setVelociadade((prev) => Math.min(4000, prev + 100)); //Desacelerar teste.
+      setVelociadade((prev) => Math.min(3500, prev + 100)); //Desacelerar teste.
       setEmoji("Errado 😨");
     }
     setTimeout(() => setEmoji(""), 1000);
