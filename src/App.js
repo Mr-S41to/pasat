@@ -51,10 +51,10 @@ export default function App() {
   const somarClick = (value) => {
     if (value === numeroAtual + numeroAnterior) {
       setPontos(pontos + 1);
-      // setVelociadade((prev) => Math.max(500, prev - 100)); //Incrementar velocidade.
+      setVelociadade((prev) => Math.max(3000, prev - 100)); //Incrementar velocidade.
       setEmoji("Correto 😄");
     } else {
-      // setVelociadade((prev) => Math.min(3000, prev + 100)); //Desacelerar teste.
+      setVelociadade((prev) => Math.min(4000, prev + 100)); //Desacelerar teste.
       setEmoji("Errado 😨");
     }
     setTimeout(() => setEmoji(""), 1000);
