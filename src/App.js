@@ -8,7 +8,7 @@ export default function App() {
   const [numeroAnterior, setNumeroAnterior] = useState(null);
   const [pontos, setPontos] = useState(0);
   const [tempoRestante, setTempoRestante] = useState(300); //5 minutos.
-  const [velocidade, setVelociadade] = useState(2500); // Velociadade Inicial.
+  const [velocidade, setVelociadade] = useState(2000); // Velociadade Inicial.
   const [iniciar, setIniciar] = useState(false);
   const [sobre, setSobre] = useState(false);
   const [emoji, setEmoji] = useState(null);
@@ -51,10 +51,10 @@ export default function App() {
   const somarClick = (value) => {
     if (value === numeroAtual + numeroAnterior) {
       setPontos(pontos + 1);
-      setVelociadade((prev) => Math.max(2000, prev - 100)); //Incrementar velocidade.
+      // setVelociadade((prev) => Math.max(2000, prev - 100)); //Incrementar velocidade.
       setEmoji("Correto 😄");
     } else {
-      setVelociadade((prev) => Math.min(3000, prev + 100)); //Desacelerar teste.
+      // setVelociadade((prev) => Math.min(3000, prev + 100)); //Desacelerar teste.
       setEmoji("Errado 😨");
     }
     setTimeout(() => setEmoji(""), 1000);
@@ -66,19 +66,25 @@ export default function App() {
 
   //Falar numeros pelo Voice Synth.
   const falarNumero = (number) => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(number);
-    utterance.lang = "pt-BR"; //Linguagem.
-    synth.speak(utterance);
+    if ('speechSynthesis' in window) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(number);
+      utterance.lang = "pt-BR"; //Linguagem.
+      synth.speak(utterance);
+    } else {
+      console.error("API SpeechSynthesis não suportada neste navegador.");
+    }
   };
+  
 
   const iniciarTeste = () => {
     setIniciar(true);
-    setVelociadade(2500);
+    setVelociadade(2000);
     setTempoRestante(300);
     setPontos(0);
     setNumeroAtual(null);
     setNumeroAnterior(null);
+    falarNumero('Teste Iniciado');
   };
 
   return (
