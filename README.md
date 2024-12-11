@@ -13,5 +13,14 @@ O objetivo é que o usuário some o número atual com o número anterior e selec
 Sim
 
 
+### Como rodar?
+1. **Instale as dependências**:
+   ```CMD
+   npm install
+2. **Inicie**;
+   ```CMD
+   npm start
+
+
 ### Link:
 [Pasat](https://pasat.onrender.com)
